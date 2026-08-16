@@ -1,0 +1,204 @@
+﻿@using WebBlazor.Components.Layout
+
+<link rel="stylesheet" href="@Assets["resume.css"]" />
+
+
+<section class="proarea">
+    <div class="pro1">
+        <div class="reshd">
+            <div class="restit">Resume</div>
+            <div class="resdate">2026-08-14</div>
+        </div>
+
+        <div class="furigana-row">
+            <div class="imlbl">ふりがな</div>
+            <div class="furigana-in">ご しえい</div>
+        </div>
+
+        <div class="name-row">
+            <div class="imlbl">Name</div>
+            <div class="name-value">NG CHI WING</div>
+        </div>
+
+        <div class="bas">
+            <div class="bascell">
+                <div class="imlbl">Birth:</div>
+                <div>1983-01-24 (Age: 43)</div>
+            </div>
+
+            <div class="bascell">
+                <div class="imlbl">Nationality:</div>
+                <div>United Kingdom</div>
+            </div>
+
+            <div class="bascell gender">
+                <span class="gender-circle">M</span> / F
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pro2">
+        <div class="photo-box">
+            <img src="https://kawaiiplanetdata.blob.core.windows.net/kpnxdatabin/az548/52964a.jpg" alt="" />
+        </div>
+    </div>
+
+
+    <div class="address-left">
+        <div class="address-furigana">
+            <div class="imlbl">ふりがな</div>
+            <div class="furigana-in">ご しえい</div>
+        </div>
+
+        <div class="address-content">
+            <div class="imlbl">
+                Address
+            </div>
+
+            <div class="address-value">
+                〒 123-0841<br />
+                Room 804, 5-29-5 Nishiarai, Adachi-ku, Tokyo-to<br />
+                (東京都足立区西新井５丁目２９番５－８０４号)
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="address-right">
+        <div class="contact-item">
+            <span class="imlbl">Mobile:</span><br />
+            070-1180-0533
+        </div>
+
+        <div class="contact-item">
+            <span class="imlbl">Email:</span><br />
+            ngcwing22@yahoo.co.jp
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <table class="restbl">
+        <thead>
+            <tr>
+                <th class="hdy">Year</th>
+                <th class="hdm">Month</th>
+                <th>Qualification</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <HistoryItem txtYear="1995" txtMonth="9" txtDesc="Aberdeen Baptist Lui Ming Choi College (HK) - entry" />
+            <HistoryItem txtYear="2000" txtMonth="6" txtDesc="Aberdeen Baptist Lui Ming Choi College (HK) - graduated" />
+            <HistoryItem txtYear="2000" txtMonth="9" txtDesc="Chu Hoi College (HK) - entry" />
+            <HistoryItem txtYear="2002" txtMonth="3" txtDesc="Chu Hoi College (HK) - withdrawal" />
+            <HistoryItem txtYear="2026" txtMonth="8" txtDesc="NCC Level 5 Diploma in Computing - obtained" />
+        </tbody>
+    </table>
+</section>
+
+
+<section>
+    <table class="restbl">
+        <thead>
+            <tr>
+                <th class="hdy">Year</th>
+                <th class="hdm">Month</th>
+                <th>Work History</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <HistoryItem txtYear="2007" txtMonth="5" txtDesc="Centaline Property Agency Limited (HK) - joined" />
+            <HistoryItem txtYear="2017" txtMonth="7" txtDesc="Centaline Property Agency Limited (HK) - resigned" />
+            <HistoryItem txtYear="2017" txtMonth="12" txtDesc="Ricacorp Properties Limited (HK) - joined" />
+            <HistoryItem txtYear="2020" txtMonth="9" txtDesc="Ricacorp Properties Limited (HK) - resigned" />
+            <HistoryItem txtYear="2020" txtMonth="10" txtDesc="RINGOBAKO CO. LIMITED (HK) - joined" />
+            <HistoryItem txtYear="2022" txtMonth="4" txtDesc="RINGOBAKO CO. LIMITED (HK) - resigned" />
+            <HistoryItem txtYear="2022" txtMonth="5" txtDesc="株式会社みかん箱 Mikanbako Corp. - joined" />
+        </tbody>
+    </table>
+</section>
+
+
+<section>
+    <table class="restbl">
+        <thead>
+            <tr>
+                <th class="hdy">Year</th>
+                <th class="hdm">Month</th>
+                <th>Certification</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <HistoryItem txtYear="2006" txtMonth="9" txtDesc="Hong Kong Estate Agents Authority - Salesperson's Licence" />
+        </tbody>
+    </table>
+</section>
+
+
+<section>
+    <table class="restbl">
+        <thead>
+            <tr>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Visa status: Intra-company transferee (until 2028-04-14)</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<section>
+    <table class="restbl">
+        <thead>
+            <tr>
+                <th>Reasons for applying, special skills, favorite etc.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    I have been living in Japan for 4 years. During this time, I have continuously worked to improve my IT skills:<br />
+                    Languages: C#, VB.NET, Swift<br />
+                    Frameworks: .NET, ASP.NET Core, Blazor, WinForms, WPF, Entity Framework Core<br />
+                    Databases: Microsoft SQL Server<br />
+                    Tools: Visual Studio, Git, GitHub<br />
+                    Cloud: Microsoft Azure, Google Cloud Platform<br /><br />
+                    Currently, I am solely responsible for supporting my company’s IT needs, which has given me a great valuable experience. I look forward to applying my experience in the IT industry and working collaboratively with an IT team in Japan.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<section>
+    <table class="restbl">
+        <thead>
+            <tr>
+                <th>Remarks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Since my current visa status is "Intra-company Transferee", I may need to change my visa if I receive an offer.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+@code {
+
+}

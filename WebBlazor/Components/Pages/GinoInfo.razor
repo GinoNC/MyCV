@@ -1,0 +1,24 @@
+﻿@page "/gino-info"
+
+<main>
+    <FluentTabs Size="TabsSize.Large" @bind-ActiveTab="@ActiveTab" @bind-ActiveTab:after="@OnTabChanged">
+        <FluentTab Header="Resume" IconStart="@(new Icons.Regular.Size20.DocumentOnePage())" Style="padding:20px 0 100px 0;">
+            <GinoResume />
+        </FluentTab>
+
+        <FluentTab Header="C.V." IconStart="@(new Icons.Regular.Size20.List())" Style="padding:20px 0 100px 0;">
+            <GinoCV />
+        </FluentTab>
+    </FluentTabs>
+</main>
+
+
+@code
+{
+    private FluentTab? ActiveTab;
+
+    private void OnTabChanged()
+    {
+        //Console.WriteLine($"Tab changed to '{ActiveTab?.Header}'.");
+    }
+}

@@ -1,0 +1,207 @@
+﻿.proarea {
+    display:grid;
+    grid-template-columns:3fr 1fr;
+}
+
+.pro1 {
+    border:1px solid lightgray;
+    border-right:none;
+}
+
+.pro2 {
+    border:1px solid lightgray;
+}
+
+.reshd {
+    background-color:#DDDDDD;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:10px;
+    border-bottom:1px solid lightgray;
+}
+.restit {
+    font-size:24px;
+    font-weight:bold;
+}
+.resdate {
+    font-size:14px;
+}
+
+.furigana-row {
+    display:grid;
+    grid-template-columns:150px 1fr;
+
+    align-items:center;
+
+    border-bottom:1px solid lightgray;
+    padding:10px;
+
+    font-size:14px;
+}
+
+.imlbl {
+    color:gray;
+}
+
+.furigana-in {
+    
+}
+
+.name-row {
+    border-bottom:1px solid lightgray;
+    padding:10px;
+}
+
+.name-value {
+    font-size:24px;
+    text-align:center;
+}
+
+.bas {
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+}
+
+.bascell {
+    border-right:1px solid lightgray;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    padding:10px;
+    font-size:14px;
+}
+
+.bascell:last-child {
+    border-right:none;
+}
+
+.gender {
+    flex-direction:row;
+    gap:3px;
+}
+
+.gender-circle {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    width:27px;
+    height:27px;
+
+    border:1px solid #000;
+    border-radius:50%;
+}
+
+.photo-box {
+    height:100%;
+}
+
+.photo-box img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.address-area {
+    display:grid;
+    grid-template-columns:3fr 1fr;
+}
+
+.address-left {
+    border:1px solid lightgray;
+    border-top:none;
+    border-right:none;
+}
+
+.address-right {
+    border:1px solid lightgray;
+    border-top:none;
+
+    padding:10px;
+
+    font-size:14px;
+}
+
+.address-furigana {
+    display:grid;
+    grid-template-columns:150px 1fr;
+    align-items:center;
+
+    padding:10px;
+    border-bottom:1px solid lightgray;
+}
+
+.address-content {
+    display:grid;
+    grid-template-columns:150px 1fr;
+    padding:10px;
+}
+
+.address-value {
+    font-size:14px;
+}
+
+.contact-item {
+    margin-bottom:22px;
+}
+
+.contact-item:last-child {
+    margin-bottom:0;
+}
+
+.restbl {
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+    font-size:14px;
+}
+
+.restbl th,
+.restbl td {
+    border:1px solid lightgray;
+    padding:10px;
+}
+
+.restbl th {
+    background-color:#DDDDDD;
+    font-weight:bold;
+}
+
+.restbl .hd1 {
+    text-align:center;
+}
+
+.restbl .hdy {
+    width:100px;
+}
+
+.restbl .hdm {
+    width:80px;
+}
+
+@media (min-width:801px) {
+    main {
+        width:800px;
+    }
+}
+@media (max-width:800px) {
+
+}
+
+@media print {
+
+    body {
+        padding:0;
+    }
+
+    .resume {
+        width:800px;
+    }
+
+}

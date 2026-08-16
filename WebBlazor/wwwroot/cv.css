@@ -1,0 +1,65 @@
+﻿.cvtit {
+    margin:0 0 40px 0;
+    font-size:24px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.cvintit {
+    display:flex;
+    align-items:center;
+}
+.cvintit .cvintitin {
+    padding:5px 10px 5px 10px;
+    font-size:16px;
+    font-weight:bold;
+    background-color:lightgray;
+}
+
+.cvpart {
+    margin:0 0 40px 0;
+    padding:10px;
+    border:1px solid lightgray;
+}
+.cvpart .ptmess {
+
+}
+.cvpart .ptmess .subbold {
+    font-weight:bold;
+}
+.cvpart .pttbl {
+    width:100%;
+    display:table;
+    border-collapse:collapse;
+}
+.cvpart .pttbl-r {
+    display:table-row;
+}
+.cvpart .pttbl-c {
+    display:table-cell;
+}
+.cvpart .pttbl-hd1 {
+    font-size:16px;
+    font-weight:bold;
+    background-color:#CCCCCC;
+}
+.cvpart .pttbl-hd1 > div {
+    padding:10px;
+}
+.cvpart .pttbl-hd2 {
+    padding:10px;
+    font-weight:bold;
+}
+.cvpart .pttbl-tmna {
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
+.cvpart .pttbl-intype {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.cvpart .pttbl-intype div {
+    padding:5px 10px 5px 10px;
+}

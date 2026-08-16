@@ -1,0 +1,15 @@
+﻿<tr>
+    <td class="hdy">@txtYear</td>
+    <td class="hdm">@txtMonth</td>
+    <td>@txtDesc</td>
+</tr>
+
+
+@code {
+    [Parameter]
+    public string txtYear { get; set; } = "";
+    [Parameter]
+    public string txtMonth { get; set; } = "";
+    [Parameter]
+    public string txtDesc { get; set; } = "";
+}
