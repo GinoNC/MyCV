@@ -71,3 +71,19 @@
 .cvpart .pttbl-job {
     padding:10px;
 }
+.cvpart .pttbl-lang {
+    display:flex;
+    align-items:center;
+}
+.cvpart .pttbl-lang div {
+    flex:1;
+    padding:5px 10px 5px 10px;
+}
+.cvpart .pttbl-cert {
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+.cvpart .pttbl-cert div {
+    padding:5px 10px 5px 10px;
+}
