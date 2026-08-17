@@ -39,7 +39,7 @@
     display:table-cell;
 }
 .cvpart .pttbl-hd1 {
-    font-size:16px;
+    font-size:18px;
     font-weight:bold;
     background-color:#CCCCCC;
 }
@@ -62,4 +62,12 @@
 }
 .cvpart .pttbl-intype div {
     padding:5px 10px 5px 10px;
+}
+.cvpart .pttbl-pos {
+    font-size:16px;
+    font-weight:bold;
+    padding:0 10px 0 10px;
+}
+.cvpart .pttbl-job {
+    padding:10px;
 }
