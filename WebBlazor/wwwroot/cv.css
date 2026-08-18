@@ -1,8 +1,12 @@
 ﻿.cvtit {
-    margin:0 0 40px 0;
+    margin:0 0 20px 0;
     font-size:24px;
     font-weight:bold;
     text-align:center;
+}
+.cvmark {
+    margin:0 0 40px 0;
+    text-align:right;
 }
 
 .cvintit {
@@ -49,6 +53,9 @@
 .cvpart .pttbl-hd2 {
     padding:10px;
     font-weight:bold;
+}
+.cvpart .pttbl-comp {
+    margin:0 0 40px 0;
 }
 .cvpart .pttbl-tmna {
     display:flex;

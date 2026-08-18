@@ -64,3 +64,12 @@ h1:focus {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align:start;
 }
+
+@media print {
+    .prdiv {
+        display:none;
+    }
+    fluent-tablist {
+        display:none;
+    }
+}

@@ -1,6 +1,7 @@
 ﻿@page "/gino-info"
 
 <main>
+    <div class="prdiv"><button onclick="window.print()">Print</button></div>
     <FluentTabs Size="TabsSize.Large" @bind-ActiveTab="@ActiveTab" @bind-ActiveTab:after="@OnTabChanged">
         <FluentTab Header="Resume" IconStart="@(new Icons.Regular.Size20.DocumentOnePage())" Style="padding:20px 0 100px 0;">
             <GinoResume />
