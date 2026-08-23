@@ -1,8 +1,10 @@
-﻿<link rel="stylesheet" href="@Assets["cv.css"]" />
+﻿@using WebBlazor.Classes
+
+<link rel="stylesheet" href="@Assets["cv.css"]" />
 
 
 <section>
-    <div class="cvtit">Curriculum Vitae</div>
+    <div class="cvtit">@Cap.cv_subject</div>
     <div class="cvmark">
         @DateTime.Today.AddDays(-1).ToString("yyyy-MM-dd")<br />
         NG CHI WING, Gino
@@ -10,38 +12,35 @@
 
     <div class="cvdiv">
         <div class="cvintit">
-            <div class="cvintitin">Recently Job Summary</div>
+            <div class="cvintitin">@Cap.cv_recent</div>
         </div>
         <div class="cvpart">
-            <div class="ptmess">
-                After joining 株式会社みかん箱 Mikanbako, I took solely responsible for developing both the company’s internal systems and external websites, covering every stage from requirements definition, system design, programming and testing.<br />
-                In 2026, I have completely upgraded the internal system’s framework and coding, improved the system's response speed and making modularization for easier applying ad hoc patch.
-            </div>
+            <div class="ptmess">@((MarkupString)Cap.cv_recent_mess)</div>
         </div>
     </div>
     
     <div class="cvdiv">
         <div class="cvintit">
-            <div class="cvintitin">Technical Skills</div>
+            <div class="cvintitin">@Cap.cv_tech</div>
         </div>
         <div class="cvpart">
             <div class="ptmess">
-                <span class="subbold">Programming Languages</span><br />
+                <span class="subbold">@Cap.cv_tech_lang</span><br />
                 C#, VB.NET, Swift<br /><br />
 
-                <span class="subbold">Frameworks / Technologies</span><br />
+                <span class="subbold">@Cap.cv_tech_frame</span><br />
                 .NET, ASP.NET Core, Blazor, WinForms, WPF, Entity Framework Core<br /><br />
 
-                <span class="subbold">Databases</span><br />
+                <span class="subbold">@Cap.cv_tech_db</span><br />
                 Microsoft SQL Server<br /><br />
 
-                <span class="subbold">Cloud Platforms</span><br />
-                Microsoft Azure, Google Cloud Platform<br /><br />
-
-                <span class="subbold">Development Tools</span><br />
+                <span class="subbold">SDK</span><br />
                 Visual Studio, Git, GitHub<br /><br />
 
-                <span class="subbold">Other Skills</span><br />
+                <span class="subbold">@Cap.cv_tech_cloud</span><br />
+                Microsoft Azure, Google Cloud Platform<br /><br />
+
+                <span class="subbold">@Cap.cv_tech_other</span><br />
                 REST API Development, Database Design, System Integration, Troubleshooting, Business Application Development
             </div>
         </div>
@@ -49,25 +48,25 @@
     
     <div class="cvdiv">
         <div class="cvintit">
-            <div class="cvintitin">Job Experience</div>
+            <div class="cvintitin">@Cap.cv_job</div>
         </div>
         <div class="cvpart">
             <div class="pttbl pttbl-comp">
                 <div class="pttbl-r pttbl-hd1">
                     <div class="pttbl-tmna">
-                        <div>2022/05 ~ now</div>
+                        <div>2022/05 ~ @Cap.cv_job_now</div>
                         <div>株式会社みかん箱 Mikanbako Corp.</div>
                     </div>
                 </div>
                 <div class="pttbl-r">
                     <div class="pttbl-intype">
                         <div>
-                            Location: Tokyo, Japan<br />
-                            Business: International Logistics<br />
-                            Employees count: 14
+                            @Cap.cv_job_locjp<br />
+                            @Cap.cv_job_buslog<br />
+                            @(Cap.cv_job_mencount)14
                         </div>
                         <div>
-                            Fulltime employment
+                            @Cap.cv_job_fullemp
                         </div>
                     </div>
                 </div>
@@ -75,110 +74,110 @@
                 <hr />
                 <div class="pttbl-r pttbl-hd2">
                     <div class="pttbl-tmna pttbl-pos">
-                        Position: Engineer
+                        @Cap.cv_job_poseng
                     </div>
                 </div>
 
                 <div class="pttbl-r">
                     <div class="pttbl-c pttbl-job">
-                        ● System infrastructure
+                        ● @Cap.cv_job_01sys
                         <FluentCard>
-                            <b>【Overview】</b><br />
-                            Setup a company servers to host databases and web application files<br /><br />
-                            <b>【Responsibility】</b><br />
-                            Management, configuration, and security maintenance<br /><br />
-                            <b>【Work Scope】</b><br />
-                            - Register Microsoft Azure to activate cloud services<br />
-                            - Managing virtual machine as the company’s cloud server<br />
-                            - Managing operating system updates on virtual machine<br />
-                            - Managing database updates on virtual machine<br />
-                            - Managing virtual machine ports to prevent unauthorized access<br /><br />
-                            <b>【Achievement】</b><br />
-                            - Successfully migrated from the old web hosting service to cloud based server<br />
-                            - Database now stores over 600,000 records<br />
-                            - Server downtime has remained under 10 minutes over the past 5 years
+                            <b>【@Cap.cv_job_inover】</b><br />
+                            @Cap.cv_job_01a<br /><br />
+                            <b>【@Cap.cv_job_inhand】</b><br />
+                            @Cap.cv_job_01b<br /><br />
+                            <b>【@Cap.cv_job_inwork】</b><br />
+                            - @Cap.cv_job_01c<br />
+                            - @Cap.cv_job_01d<br />
+                            - @Cap.cv_job_01e<br />
+                            - @Cap.cv_job_01f<br />
+                            - @Cap.cv_job_01g<br /><br />
+                            <b>【@Cap.cv_job_ingoal】</b><br />
+                            - @Cap.cv_job_01h<br />
+                            - @Cap.cv_job_01i<br />
+                            - @Cap.cv_job_01j
                         </FluentCard>
                     </div>
                 </div>
 
                 <div class="pttbl-r">
                     <div class="pttbl-c pttbl-job">
-                        ● Project: Internal System
+                        ● @Cap.cv_job_02sys
                         <FluentCard>
-                            <b>【Overview】</b><br />
-                            Build and maintain an internal CMS website for the company, with continuous improvements and new feature development based on business requirements<br /><br />
-                            <b>【Responsibility】</b><br />
-                            Requirement definition, system design, programming, testing<br /><br />
-                            <b>【Work Scope】</b><br />
-                            - Design website workflow, UI and coding<br />
-                            - Managing client records<br />
-                            - Managing clients’ shipment records<br />
-                            - Managing clients’ bank transfer records<br />
-                            - Managing warehouse inbound/outbound stock records<br />
-                            - Managing clients’ shipment request records<br />
-                            - Managing clients’ enquiry records<br />
-                            - Integrated external courier company’s API to enable automated shipment request<br />
-                            - Importing external courier company data<br /><br />
-                            <b>【Achievement】</b><br />
-                            - The system has been in operation for over 10 years<br />
-                            - Successfully developed and deployed the 5th major version which has upgraded framework and coding, improved response speed and making modularization
+                            <b>【@Cap.cv_job_inover】</b><br />
+                            @Cap.cv_job_02a<br /><br />
+                            <b>【@Cap.cv_job_inhand】</b><br />
+                            @Cap.cv_job_02b<br /><br />
+                            <b>【@Cap.cv_job_inwork】</b><br />
+                            - @Cap.cv_job_02c<br />
+                            - @Cap.cv_job_02d<br />
+                            - @Cap.cv_job_02e<br />
+                            - @Cap.cv_job_02f<br />
+                            - @Cap.cv_job_02g<br />
+                            - @Cap.cv_job_02h<br />
+                            - @Cap.cv_job_02i<br />
+                            - @Cap.cv_job_02j<br />
+                            - @Cap.cv_job_02k<br /><br />
+                            <b>【@Cap.cv_job_ingoal】</b><br />
+                            - @Cap.cv_job_02l<br />
+                            - @Cap.cv_job_02m
                         </FluentCard>
                     </div>
                 </div>
 
                 <div class="pttbl-r">
                     <div class="pttbl-c pttbl-job">
-                        ● Project: Client Shipment Request
+                        ● @Cap.cv_job_03sys
                         <FluentCard>
-                            <b>【Overview】</b><br />
-                            Develop a membership shipment management website that allows clients to submit shipment requests and track their delivery progress<br /><br />
-                            <b>【Responsibility】</b><br />
-                            Requirement definition, system design, programming, testing<br /><br />
-                            <b>【Work Scope】</b><br />
-                            - Design website workflow, UI and coding<br />
-                            - Managing shipment request records<br />
-                            - Ensuring consistency between internal system and the membership shipment management website<br /><br />
-                            <b>【Achievement】</b><br />
-                            - Clients have submitted over 10,000 shipment requests through the website
+                            <b>【@Cap.cv_job_inover】</b><br />
+                            @Cap.cv_job_03a<br /><br />
+                            <b>【@Cap.cv_job_inhand】</b><br />
+                            @Cap.cv_job_03b<br /><br />
+                            <b>【@Cap.cv_job_inwork】</b><br />
+                            - @Cap.cv_job_03c<br />
+                            - @Cap.cv_job_03d<br />
+                            - @Cap.cv_job_03e<br /><br />
+                            <b>【@Cap.cv_job_ingoal】</b><br />
+                            - @Cap.cv_job_03f
                         </FluentCard>
                     </div>
                 </div>
 
                 <div class="pttbl-r">
                     <div class="pttbl-c pttbl-job">
-                        ● Project: Enquiry form
+                        ● @Cap.cv_job_04sys
                         <FluentCard>
-                            <b>【Overview】</b><br />
-                            Develop a client enquiry website to unify all enquiry entry points across the company’s various websites<br /><br />
-                            <b>【Responsibility】</b><br />
-                            Requirement definition, system design, programming, testing<br /><br />
-                            <b>【Work Scope】</b><br />
-                            - Design website workflow, UI and coding<br />
-                            - Managing enquiry records<br />
-                            - Configuring automated email notifications to clients for submitted enquiry<br /><br />
-                            <b>【Achievement】</b><br />
-                            - Successfully migrated multiple legacy enquiry pages into a single unified enquiry website<br />
-                            - Clients have submitted over 15,000 enquiries through the new enquriy form
+                            <b>【@Cap.cv_job_inover】</b><br />
+                            @Cap.cv_job_04a<br /><br />
+                            <b>【@Cap.cv_job_inhand】</b><br />
+                            @Cap.cv_job_04b<br /><br />
+                            <b>【@Cap.cv_job_inwork】</b><br />
+                            - @Cap.cv_job_04c<br />
+                            - @Cap.cv_job_04d<br />
+                            - @Cap.cv_job_04e<br /><br />
+                            <b>【@Cap.cv_job_ingoal】</b><br />
+                            - @Cap.cv_job_04f<br />
+                            - @Cap.cv_job_04g
                         </FluentCard>
                     </div>
                 </div>
 
                 <div class="pttbl-r">
                     <div class="pttbl-c pttbl-job">
-                        ● Email and File System
+                        ● @Cap.cv_job_05sys
                         <FluentCard>
-                            <b>【Overview】</b><br />
-                            Provide email services and a cloud-based file system for company employees, including configuring automatic forwarding for designated email accounts<br /><br />
-                            <b>【Responsibility】</b><br />
-                            Management and configuration<br /><br />
-                            <b>【Work Scope】</b><br />
-                            - Register Google Workspace to activate services<br />
-                            - Managing email logins and passwords<br />
-                            - Managing email forwarding rules<br /><br />
-                            <b>【Achievement】</b><br />
-                            - Successfully migrated from the old email system to Gmail<br />
-                            - Improved file sharing efficiency using Google Drive<br />
-                            - Enhanced team collaboration efficiency using Google Docs and Google Sheets
+                            <b>【@Cap.cv_job_inover】</b><br />
+                            @Cap.cv_job_05a<br /><br />
+                            <b>【@Cap.cv_job_inhand】</b><br />
+                            @Cap.cv_job_05b<br /><br />
+                            <b>【@Cap.cv_job_inwork】</b><br />
+                            - @Cap.cv_job_05c<br />
+                            - @Cap.cv_job_05d<br />
+                            - @Cap.cv_job_05e<br /><br />
+                            <b>【@Cap.cv_job_ingoal】</b><br />
+                            - @Cap.cv_job_05f<br />
+                            - @Cap.cv_job_05g<br />
+                            - @Cap.cv_job_05h
                         </FluentCard>
                     </div>
                 </div>
@@ -194,12 +193,12 @@
                 <div class="pttbl-r">
                     <div class="pttbl-intype">
                         <div>
-                            Location: Hong Kong<br />
-                            Business: International Logistics<br />
-                            Employees count: 4
+                            @Cap.cv_job_lochk<br />
+                            @Cap.cv_job_buslog<br />
+                            @(Cap.cv_job_mencount)4
                         </div>
                         <div>
-                            Fulltime employment
+                            @Cap.cv_job_fullemp
                         </div>
                     </div>
                 </div>
@@ -207,14 +206,12 @@
                 <hr />
                 <div class="pttbl-r pttbl-hd2">
                     <div class="pttbl-tmna pttbl-pos">
-                        Position: Engineer
+                        @Cap.cv_job_poseng
                     </div>
                 </div>
                 <div class="pttbl-r">
                     <div class="pttbl-c pttbl-job">
-                        This is an overseas branch of "株式会社みかん箱 Mikanbako" established in Hong Kong.<br />
-                        Due to Japan COVID related border restrictions, I was unable to obtain a visa to enter Japan. As a result, I first joined the Hong Kong branch.<br />
-                        The job responsibilities are exactly the same as the position at Mikanbako.
+                        @((MarkupString)Cap.cv_job_06)
                     </div>
                 </div>
             </div>
@@ -229,12 +226,12 @@
                 <div class="pttbl-r">
                     <div class="pttbl-intype">
                         <div>
-                            Location: Hong Kong<br />
-                            Business: Real Estate Property Agency<br />
-                            Employees count: 500+
+                            @Cap.cv_job_lochk<br />
+                            @Cap.cv_job_busprop<br />
+                            @(Cap.cv_job_mencount)500+
                         </div>
                         <div>
-                            Fulltime employment
+                            @Cap.cv_job_fullemp
                         </div>
                     </div>
                 </div>
@@ -242,39 +239,39 @@
                 <hr />
                 <div class="pttbl-r pttbl-hd2">
                     <div class="pttbl-tmna pttbl-pos">
-                        Position: Programmer
+                        @Cap.cv_job_posprog
                     </div>
                 </div>
                 <div class="pttbl-r">
                     <div class="pttbl-c pttbl-job">
-                        ● Accounting System
+                        ● @Cap.cv_job_07sys
                         <FluentCard>
-                            <b>【Overview】</b><br />
-                            Maintain the exist accounting system and add/remove features based on user requirements<br /><br />
-                            <b>【Responsibility】</b><br />
-                            Requirement definition, programming, testing<br /><br />
-                            <b>【Work Scope】</b><br />
-                            - Ensuring the supporting of the legacy framework of accounting system on new PCs<br />
-                            - Rapid development is necessary since user‑driven requirement changes frequently
+                            <b>【@Cap.cv_job_inover】</b><br />
+                            @Cap.cv_job_07a<br /><br />
+                            <b>【@Cap.cv_job_inhand】</b><br />
+                            @Cap.cv_job_07b<br /><br />
+                            <b>【@Cap.cv_job_inwork】</b><br />
+                            - @Cap.cv_job_07c<br />
+                            - @Cap.cv_job_07d
                         </FluentCard>
                     </div>
                 </div>
                 <div class="pttbl-r">
                     <div class="pttbl-c pttbl-job">
-                        ● Human Resources System
+                        ● @Cap.cv_job_08sys
                         <FluentCard>
-                            <b>【Overview】</b><br />
-                            Maintain the exist HR system, enhance the system, and add/remove features based on user requirements<br /><br />
-                            <b>【Responsibility】</b><br />
-                            Requirement definition, system design, programming, testing and assigning tasks to 2 colleagues<br /><br />
-                            <b>【Work Scope】</b><br />
-                            - Due to privacy requirements, all data must be encrypted, so development work requires step‑by‑step confirmation with users<br />
-                            - Collaborating with 2 colleagues to improve the system<br />
-                            - Performing frequent testing of embedded external components during framework upgrades<br />
-                            - Resolving issues caused by non object‑oriented design and hard‑coded implementations<br /><br />
-                            <b>【Achievement】</b><br />
-                            - Successfully upgraded the system from the old framework to the latest version while maintaining system performance<br />
-                            - Successfully converted and modularized most SQL Views into object‑oriented structures, improving long term maintainability
+                            <b>【@Cap.cv_job_inover】</b><br />
+                            @Cap.cv_job_08a<br /><br />
+                            <b>【@Cap.cv_job_inhand】</b><br />
+                            @Cap.cv_job_08b<br /><br />
+                            <b>【@Cap.cv_job_inwork】</b><br />
+                            - @Cap.cv_job_08c<br />
+                            - @Cap.cv_job_08d<br />
+                            - @Cap.cv_job_08e<br />
+                            - @Cap.cv_job_08f<br /><br />
+                            <b>【@Cap.cv_job_ingoal】</b><br />
+                            - @Cap.cv_job_08g<br />
+                            - @Cap.cv_job_08h
                         </FluentCard>
                     </div>
                 </div>
@@ -290,12 +287,12 @@
                 <div class="pttbl-r">
                     <div class="pttbl-intype">
                         <div>
-                            Location: Hong Kong<br />
-                            Business: Real Estate Property Agency<br />
-                            Employees count: 3,000+
+                            @Cap.cv_job_lochk<br />
+                            @Cap.cv_job_busprop<br />
+                            @(Cap.cv_job_mencount)3,000+
                         </div>
                         <div>
-                            Fulltime employment
+                            @Cap.cv_job_fullemp
                         </div>
                     </div>
                 </div>
@@ -303,22 +300,22 @@
                 <hr />
                 <div class="pttbl-r pttbl-hd2">
                     <div class="pttbl-tmna pttbl-pos">
-                        Position: Programmer (from 2015/04 to 2016/05)<br />
-                        Position: I.T. Co-Ordinator (from 2016/05 to 2017/07)
+                        @Cap.cv_job_posprog (2015/04 ~ 2016/05)<br />
+                        @Cap.cv_job_poscord (2016/05 ~ 2017/07)
                     </div>
                 </div>
                 <div class="pttbl-r">
                     <div class="pttbl-c pttbl-job">
-                        ● Property Information System
+                        ● @Cap.cv_job_09sys
                         <FluentCard>
-                            <b>【Overview】</b><br />
-                            Maintain the exist property system and adding new report formats based on user requirements<br /><br />
-                            <b>【Responsibility】</b><br />
-                            Requirement definition, report design, programming, testing<br /><br />
-                            <b>【Work Scope】</b><br />
-                            - Coding SQL Stored Procedures to process and output data<br />
-                            - Designing reports using "Crystal Reports" according to user provided layouts<br />
-                            - Embedding the reports into the designated locations within the system
+                            <b>【@Cap.cv_job_inover】</b><br />
+                            @Cap.cv_job_09a<br /><br />
+                            <b>【@Cap.cv_job_inhand】</b><br />
+                            @Cap.cv_job_09b<br /><br />
+                            <b>【@Cap.cv_job_inwork】</b><br />
+                            - @Cap.cv_job_09c<br />
+                            - @Cap.cv_job_09d<br />
+                            - @Cap.cv_job_09e
                         </FluentCard>
                     </div>
                 </div>
@@ -328,15 +325,15 @@
     
     <div class="cvdiv">
         <div class="cvintit">
-            <div class="cvintitin">Programming Ability</div>
+            <div class="cvintitin">@Cap.cv_abi</div>
         </div>
         <div class="cvpart">
             <div class="pttbl">
                 <div class="pttbl-r pttbl-hd2">
                     <div class="pttbl-lang">
-                        <div>Language</div>
-                        <div>Platform / SDK</div>
-                        <div>Ability</div>
+                        <div>@Cap.cv_abi_lang</div>
+                        <div>@Cap.cv_abi_frame / SDK</div>
+                        <div>@Cap.cv_abi_rate</div>
                     </div>
                 </div>
                 <div class="pttbl-r">
@@ -372,14 +369,14 @@
 
     <div class="cvdiv">
         <div class="cvintit">
-            <div class="cvintitin">Advanced Qualification</div>
+            <div class="cvintitin">@Cap.cv_adv</div>
         </div>
         <div class="cvpart">
             <div class="pttbl">
                 <div class="pttbl-r">
                     <div class="pttbl-cert">
                         <div>NCC Level 5 Diploma in Computing</div>
-                        <div>2026-08 obtained</div>
+                        <div>2026-08 @Cap.cv_adv_obta</div>
                     </div>
                 </div>
             </div>
@@ -388,17 +385,21 @@
 
     <div class="cvdiv">
         <div class="cvintit">
-            <div class="cvintitin">Self Promotion</div>
+            <div class="cvintitin">@Cap.cv_pr</div>
+        </div>
+        <div class="cvpart">
+            <div class="ptmess">@((MarkupString)Cap.cv_pr_mess)</div>
+        </div>
+    </div>
+
+    <div class="cvdiv">
+        <div class="cvintit">
+            <div class="cvintitin">@Cap.sa_project</div>
         </div>
         <div class="cvpart">
             <div class="ptmess">
-                Now I am solely responsible for all IT systems within the company, so I take a conservative and risk‑aware approach when handling system related matters:<br />
-                - Using mature and proven technologies<br />
-                - Carefully selecting third‑party components<br />
-                - Keep improve server and website security<br /><br />
-                In my spare time, I enjoy collecting technical information related to my workfor example, watching Microsoft Build sessions to expand my technical knowledge and test some new technologies on my personal server.<br /><br />
-                My recent exploration involves deploying websites using AI. AI can significantly improve coding efficiency, but the final product still requires human review and refine. I believe that "Human‑AI collaboration" will become a major trend in the future.<br /><br />
-                I am studying Japanese and BSc(Hons) Computing Degree, and I look forward a long term career in Japan.
+                <a href="https://www.gcjelly.tokyo/gino-info" target="_blank">@Cap.sa_project_recv</a><br /><br />
+                GitHub: <a href="https://github.com/GinoNC/MyCV" target="_blank">@Cap.sa_project_sou</a>
             </div>
         </div>
     </div>
@@ -406,5 +407,6 @@
 
 
 @code {
-
+    [Parameter]
+    public LangCaption Cap { get; set; } = new();
 }

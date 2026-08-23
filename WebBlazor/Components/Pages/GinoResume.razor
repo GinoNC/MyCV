@@ -1,4 +1,5 @@
-﻿@using WebBlazor.Components.Layout
+﻿@using WebBlazor.Classes
+@using WebBlazor.Components.Layout
 
 <link rel="stylesheet" href="@Assets["resume.css"]" />
 
@@ -6,7 +7,7 @@
 <section class="proarea">
     <div class="pro1">
         <div class="reshd">
-            <div class="restit">Resume</div>
+            <div class="restit">@Cap.re_subject</div>
             <div class="resdate">@DateTime.Today.AddDays(-1).ToString("yyyy-MM-dd")</div>
         </div>
 
@@ -16,23 +17,23 @@
         </div>
 
         <div class="name-r">
-            <div class="imlbl">Name</div>
+            <div class="imlbl">@Cap.re_name</div>
             <div class="nalbl">NG CHI WING</div>
         </div>
 
         <div class="bas">
             <div class="bascell">
-                <div class="imlbl">Birth:</div>
-                <div>1983-01-24 (Age: 43)</div>
+                <div class="imlbl">@Cap.re_birth</div>
+                <div>1983-01-24 @Cap.re_age</div>
             </div>
 
             <div class="bascell">
-                <div class="imlbl">Nationality:</div>
-                <div>United Kingdom</div>
+                <div class="imlbl">@Cap.re_nation</div>
+                <div>@Cap.re_british</div>
             </div>
 
             <div class="bascell gender">
-                <span class="gender-circle">M</span> / F
+                <span class="gender-circle">@Cap.re_male</span> / @Cap.re_female
             </div>
         </div>
     </div>
@@ -53,13 +54,12 @@
 
         <div class="addre-content">
             <div class="imlbl">
-                Address
+                @Cap.re_address
             </div>
 
             <div class="addre-value">
                 〒 123-0841<br />
-                Room 804, 5-29-5 Nishiarai, Adachi-ku, Tokyo-to<br />
-                (東京都足立区西新井５丁目２９番５－８０４号)
+                @((MarkupString)Cap.re_location)
             </div>
         </div>
 
@@ -68,12 +68,12 @@
 
     <div class="addre-right">
         <div class="contitem">
-            <span class="imlbl">Mobile:</span><br />
+            <span class="imlbl">@Cap.re_mobile</span><br />
             070-1180-0533
         </div>
 
         <div class="contitem">
-            <span class="imlbl">Email:</span><br />
+            <span class="imlbl">@Cap.re_email</span><br />
             ngcwing22@yahoo.co.jp
         </div>
     </div>
@@ -84,18 +84,18 @@
     <table class="restbl">
         <thead>
             <tr>
-                <th class="hdy">Year</th>
-                <th class="hdm">Month</th>
-                <th>Qualification</th>
+                <th class="hdy">@Cap.re_year</th>
+                <th class="hdm">@Cap.re_month</th>
+                <th>@Cap.re_quali</th>
             </tr>
         </thead>
 
         <tbody>
-            <HistoryItem txtYear="1995" txtMonth="9" txtDesc="Aberdeen Baptist Lui Ming Choi College (HK) - entry" />
-            <HistoryItem txtYear="2000" txtMonth="6" txtDesc="Aberdeen Baptist Lui Ming Choi College (HK) - graduated" />
-            <HistoryItem txtYear="2000" txtMonth="9" txtDesc="Chu Hoi College (HK) - entry" />
-            <HistoryItem txtYear="2002" txtMonth="3" txtDesc="Chu Hoi College (HK) - withdrawal" />
-            <HistoryItem txtYear="2026" txtMonth="8" txtDesc="NCC Level 5 Diploma in Computing - obtained" />
+            <HistoryItem txtYear="1995" txtMonth="9" txtDesc=@("Aberdeen Baptist Lui Ming Choi College (HK) - " + Cap.re_quali_entry) />
+            <HistoryItem txtYear="2000" txtMonth="6" txtDesc=@("Aberdeen Baptist Lui Ming Choi College (HK) - " + Cap.re_quali_grad) />
+            <HistoryItem txtYear="2000" txtMonth="9" txtDesc=@("Chu Hoi College (HK) - " + Cap.re_quali_entry) />
+            <HistoryItem txtYear="2002" txtMonth="3" txtDesc=@("Chu Hoi College (HK) - " + Cap.re_quali_with) />
+            <HistoryItem txtYear="2026" txtMonth="8" txtDesc=@("NCC Level 5 Diploma in Computing - " + Cap.re_quali_obta) />
         </tbody>
     </table>
 </section>
@@ -105,20 +105,20 @@
     <table class="restbl">
         <thead>
             <tr>
-                <th class="hdy">Year</th>
-                <th class="hdm">Month</th>
-                <th>Work History</th>
+                <th class="hdy">@Cap.re_year</th>
+                <th class="hdm">@Cap.re_month</th>
+                <th>@Cap.re_work</th>
             </tr>
         </thead>
 
         <tbody>
-            <HistoryItem txtYear="2007" txtMonth="5" txtDesc="Centaline Property Agency Limited (HK) - joined" />
-            <HistoryItem txtYear="2017" txtMonth="7" txtDesc="Centaline Property Agency Limited (HK) - resigned" />
-            <HistoryItem txtYear="2017" txtMonth="12" txtDesc="Ricacorp Properties Limited (HK) - joined" />
-            <HistoryItem txtYear="2020" txtMonth="9" txtDesc="Ricacorp Properties Limited (HK) - resigned" />
-            <HistoryItem txtYear="2020" txtMonth="10" txtDesc="RINGOBAKO CO. LIMITED (HK) - joined" />
-            <HistoryItem txtYear="2022" txtMonth="4" txtDesc="RINGOBAKO CO. LIMITED (HK) - resigned" />
-            <HistoryItem txtYear="2022" txtMonth="5" txtDesc="株式会社みかん箱 Mikanbako Corp. - joined" />
+            <HistoryItem txtYear="2007" txtMonth="5" txtDesc=@("Centaline Property Agency Limited (HK) - " + Cap.re_work_join) />
+            <HistoryItem txtYear="2017" txtMonth="7" txtDesc=@("Centaline Property Agency Limited (HK) - " + Cap.re_work_leave) />
+            <HistoryItem txtYear="2017" txtMonth="12" txtDesc=@("Ricacorp Properties Limited (HK) - " + Cap.re_work_join) />
+            <HistoryItem txtYear="2020" txtMonth="9" txtDesc=@("Ricacorp Properties Limited (HK) - " + Cap.re_work_leave) />
+            <HistoryItem txtYear="2020" txtMonth="10" txtDesc=@("RINGOBAKO CO. LIMITED (HK) - " + Cap.re_work_join) />
+            <HistoryItem txtYear="2022" txtMonth="4" txtDesc=@("RINGOBAKO CO. LIMITED (HK) - " + Cap.re_work_leave) />
+            <HistoryItem txtYear="2022" txtMonth="5" txtDesc=@("株式会社みかん箱 Mikanbako Corp. - " + Cap.re_work_join) />
         </tbody>
     </table>
 </section>
@@ -128,9 +128,9 @@
     <table class="restbl">
         <thead>
             <tr>
-                <th class="hdy">Year</th>
-                <th class="hdm">Month</th>
-                <th>Certification</th>
+                <th class="hdy">@Cap.re_year</th>
+                <th class="hdm">@Cap.re_month</th>
+                <th>@Cap.re_cert</th>
             </tr>
         </thead>
 
@@ -145,12 +145,12 @@
     <table class="restbl">
         <thead>
             <tr>
-                <th>Note</th>
+                <th>@Cap.re_note</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Visa status: Intra-company transferee (until 2028-04-14)</td>
+                <td>@((MarkupString)Cap.re_note_mess)</td>
             </tr>
         </tbody>
     </table>
@@ -161,19 +161,13 @@
     <table class="restbl">
         <thead>
             <tr>
-                <th>Reasons for applying, special skills, favorite etc.</th>
+                <th>@Cap.re_apply</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>
-                    I have been living in Japan for 4 years. During this time, I have continuously worked to improve my IT skills:<br />
-                    Languages: C#, VB.NET, Swift<br />
-                    Frameworks: .NET, ASP.NET Core, Blazor, WinForms, WPF, Entity Framework Core<br />
-                    Databases: Microsoft SQL Server<br />
-                    Tools: Visual Studio, Git, GitHub<br />
-                    Cloud: Microsoft Azure, Google Cloud Platform<br /><br />
-                    Currently, I am solely responsible for supporting my company’s IT requirements, which has given me a great valuable experience. I look forward to applying my experience in the IT industry and working collaboratively with an IT team in Japan.
+                    @((MarkupString)Cap.re_apply_mess)
                 </td>
             </tr>
         </tbody>
@@ -185,12 +179,31 @@
     <table class="restbl">
         <thead>
             <tr>
-                <th>Remarks</th>
+                <th>@Cap.re_remark</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Since my current visa status is "Intra-company Transferee", I may need to change my visa if I receive an offer.</td>
+                <td>@Cap.re_remark_mess</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<section>
+    <table class="restbl">
+        <thead>
+            <tr>
+                <th>@Cap.sa_project</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="https://www.gcjelly.tokyo/gino-info" target="_blank">@Cap.sa_project_recv</a><br /><br />
+                    GitHub: <a href="https://github.com/GinoNC/MyCV" target="_blank">@Cap.sa_project_sou</a>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -198,5 +211,6 @@
 
 
 @code {
-
+    [Parameter]
+    public LangCaption Cap { get; set; } = new();
 }

@@ -1,14 +1,24 @@
 ﻿@page "/gino-info"
 
+@using WebBlazor.Classes
+
 <main>
-    <div class="prdiv"><button onclick="window.print()">Print</button></div>
+    <div class="prdiv">
+        <div>
+            <input type="radio" name="lang" checked @onchange="() => ChangeLang(0)" /> @Lang.LangJP&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="lang" @onchange="() => ChangeLang(1)" /> @Lang.LangEN
+        </div>
+        <div>
+            <button onclick="window.print()">Print</button>
+        </div>
+    </div>
     <FluentTabs Size="TabsSize.Large" @bind-ActiveTab="@ActiveTab" @bind-ActiveTab:after="@OnTabChanged">
         <FluentTab Header="Resume" IconStart="@(new Icons.Regular.Size20.DocumentOnePage())" Style="padding:20px 0 100px 0;">
-            <GinoResume />
+            <GinoResume Cap=@Lang />
         </FluentTab>
 
         <FluentTab Header="C.V." IconStart="@(new Icons.Regular.Size20.List())" Style="padding:20px 0 100px 0;">
-            <GinoCV />
+            <GinoCV Cap=@Lang />
         </FluentTab>
     </FluentTabs>
 </main>
@@ -16,10 +26,17 @@
 
 @code
 {
+    private LangCaption Lang = new();
     private FluentTab? ActiveTab;
 
     private void OnTabChanged()
     {
         //Console.WriteLine($"Tab changed to '{ActiveTab?.Header}'.");
+    }
+
+    private void ChangeLang(int _mode)
+    {
+        if (_mode == 0) Lang = new();
+        if (_mode == 1) Lang = new("en");
     }
 }
