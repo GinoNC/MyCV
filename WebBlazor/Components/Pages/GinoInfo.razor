@@ -13,11 +13,11 @@
         </div>
     </div>
     <FluentTabs Size="TabsSize.Large" @bind-ActiveTab="@ActiveTab" @bind-ActiveTab:after="@OnTabChanged">
-        <FluentTab Header="Resume" IconStart="@(new Icons.Regular.Size20.DocumentOnePage())" Style="padding:20px 0 100px 0;">
+        <FluentTab Header=@Lang.re_subject IconStart="@(new Icons.Regular.Size20.DocumentOnePage())" Style="padding:20px 0 100px 0;">
             <GinoResume Cap=@Lang />
         </FluentTab>
 
-        <FluentTab Header="C.V." IconStart="@(new Icons.Regular.Size20.List())" Style="padding:20px 0 100px 0;">
+        <FluentTab Header=@Lang.cv_subject IconStart="@(new Icons.Regular.Size20.List())" Style="padding:20px 0 100px 0;">
             <GinoCV Cap=@Lang />
         </FluentTab>
     </FluentTabs>
