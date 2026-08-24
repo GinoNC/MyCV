@@ -55,7 +55,8 @@
 						"Now I am solely responsible for supporting my company’s IT requirements, which has given me a great valuable experience. I look forward to applying my experience in the IT industry and working collaboratively with an IT team in Japan.";
 					re_remark = "Remarks";
 					re_remark_mess = "Since my current visa status is \"Intra-company Transferee\", I may need to change my visa if I receive an offer.";
-					
+
+					cv_subject = "Curriculum Vitae";
 					cv_recent = "Recently Job Summary";
 					cv_recent_mess = "After joining 株式会社みかん箱 Mikanbako, I took solely responsible for developing both the company’s internal systems and external websites, covering every stage from requirements definition, system design, programming and testing.<br />" +
 						"In 2026, I have completely upgraded the internal system’s framework and coding, improved the system's response speed and making modularization for easier applying ad hoc patch.";
